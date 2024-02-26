@@ -70,7 +70,6 @@ app.post('/step2', async (req, res) => {
       ${frameMetadata}
     </head>
     <body>
-      <h1>Express Example with pinata-fdk</h1>
     </body>
     </html>`
   if(messageRes.isValid){
@@ -92,7 +91,7 @@ app.post('/step3', async (req, res) => {
   const messageRes = await fdk.validateFrameMessage(req.body);
   const frameMetadata = fdk.getFrameMetadata({
     buttons: [{label: "View Source Code", action: "post_redirect"}], 
-    cid: "QmaN92zcJAHPCUSjc6XdyUvcx3VM9z3nba34JELEXsehta", 
+    cid: "QmRbsaR8C7V2qdkUp2dHUb9rVUEYXeyxYSvbhbPYi5z5gP", 
     post_url: `${process.env.HOSTED_DOMAIN}/redirect`
   })
   const html = `<!DOCTYPE html>
@@ -101,7 +100,6 @@ app.post('/step3', async (req, res) => {
       ${frameMetadata}
     </head>
     <body>
-      <h1>Express Example with pinata-fdk</h1>
     </body>
     </html>`
   if(messageRes.isValid){
