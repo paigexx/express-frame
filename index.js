@@ -61,7 +61,7 @@ app.post('/step2', async (req, res) => {
   const messageRes = await fdk.validateFrameMessage(req.body);
   const frameMetadata = fdk.getFrameMetadata({
     buttons: [{label: "Next Step"}], 
-    cid: "QmbuKjs9wjPj63PLEtBwBCo7WYAYQZ2LFck5ZyHuoaLaaJ", 
+    cid: "QmduZnRh94DiTFmWjqeDhVPFQCC81Zy8CARrWREwjNc5JR", 
     post_url: `${process.env.HOSTED_DOMAIN}/step3`
   })
   const html = `<!DOCTYPE html>
@@ -87,11 +87,12 @@ app.post('/step2', async (req, res) => {
   }
 });
 
+
 app.post('/step3', async (req, res) => {
   const messageRes = await fdk.validateFrameMessage(req.body);
   const frameMetadata = fdk.getFrameMetadata({
     buttons: [{label: "View Source Code", action: "post_redirect"}], 
-    cid: "QmbuKjs9wjPj63PLEtBwBCo7WYAYQZ2LFck5ZyHuoaLaaJ", 
+    cid: "QmaN92zcJAHPCUSjc6XdyUvcx3VM9z3nba34JELEXsehta", 
     post_url: `${process.env.HOSTED_DOMAIN}/redirect`
   })
   const html = `<!DOCTYPE html>
